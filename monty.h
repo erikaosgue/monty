@@ -2,12 +2,13 @@
 #define MONTY_H
 
 /* LIBRARIES */
-#include <stdio.h> /* getline */
-#include <stdlib.h> /* exit */
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
-extern int num_of_node;
+int exit_value;
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -42,6 +43,11 @@ typedef struct instruction_s
 char **split_line(char *line, unsigned int numlinea);
 int find_function(char **tokens, unsigned int numlinea);
 void func_push(stack_t **head, unsigned int numlinea);
+void func_pop(stack_t **head, unsigned int numlinea);
+
+
+int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+size_t dlistint_len(const stack_t *h);
 
 
 
