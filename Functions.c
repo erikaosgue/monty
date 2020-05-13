@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include "monty.h"
 
+
+/** para subir a github*//** para subir a github*/
+/** para subir a github*/
+
+
 /**
  * push - add node initial of a list
  * @head: Pointer from main
