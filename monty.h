@@ -47,8 +47,11 @@ typedef struct instruction_s
 char **split_line(char *line, unsigned int numlinea);
 int find_function(char **tokens, unsigned int numlinea);
 void func_push(stack_t **head, unsigned int numlinea);
-
+void *func_push(stack_t **head, unsigned int n);
+void func_pall(const stack_t *h, unsigned int n);
+void func_pint(const stack_t *h, unsigned int n);
+void func_swap(stack_t **stack, unsigned int line_number);
+void func_nop(stack_t **stack, unsigned int line_number);
 >>>>>>> 2f017128046314d169517a1063eaef04edd95005
-
 
 #endif // MONTY_H
