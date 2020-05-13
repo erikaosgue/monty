@@ -1,5 +1,14 @@
 #ifndef MONTY_H
 #define MONTY_H
+
+/* LIBRARIES */
+#include <stdio.h> /* getline */
+#include <stdlib.h> /* exit */
+#include <string.h>
+#include <ctype.h>
+
+extern int num_of_node;
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -28,4 +37,12 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+
+char **split_line(char *line, unsigned int numlinea);
+int find_function(char **tokens, unsigned int numlinea);
+void func_push(stack_t **head, unsigned int numlinea);
+
+
+
 #endif // MONTY_H
