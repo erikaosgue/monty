@@ -25,6 +25,7 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -42,13 +43,15 @@ typedef struct instruction_s
 
 char **split_line(char *line, unsigned int numlinea);
 int find_function(char **tokens, unsigned int numlinea);
-void func_push(stack_t **head, unsigned int numlinea);
-void func_pop(stack_t **head, unsigned int numlinea);
-
 
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t dlistint_len(const stack_t *h);
 
-
+void func_pop(stack_t **head, unsigned int numlinea);
+void func_push(stack_t **head, unsigned int n);
+void func_pall(const stack_t *h, unsigned int n);
+void func_pint(const stack_t *h, unsigned int n);
+void func_swap(stack_t **stack, unsigned int line_number);
+void func_nop(stack_t **stack, unsigned int line_number);
 
 #endif // MONTY_H
