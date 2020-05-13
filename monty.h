@@ -52,11 +52,13 @@ size_t dlistint_len(const stack_t *h);
 
 void func_push(stack_t **head, unsigned int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
+stack_t	*sum_dlistint(stack_t **head);
 
 void func_pall(stack_t **stack, unsigned int line_number);
 void func_pint(stack_t **stack, unsigned int line_number);
 void func_swap(stack_t **stack, unsigned int line_number);
 void func_nop(stack_t **stack, unsigned int line_number);
+void func_add(stack_t **head, unsigned int numlinea);
 
 void free_dlistint(stack_t *head);
 size_t print_dlistint(const stack_t *h);

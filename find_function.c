@@ -19,6 +19,7 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
                 {"pop", func_pop},
                 {"swap", func_swap},
                 {"nop", func_nop},
+                {"add", func_add},
                 {NULL, NULL}};
         
         while(functions[i].opcode != NULL)
