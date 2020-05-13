@@ -52,4 +52,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Erika Osorio Guerrero y Roger...** - [erikaosgue](https://github.com/erikaosgue)[roger](link)
+* **Erika Osorio Guerrero y Roger Rendon** - [erikaosgue](https://github.com/erikaosgue)[rogerrendons](https://github.com/rogerrendons)
