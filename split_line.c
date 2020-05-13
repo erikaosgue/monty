@@ -19,12 +19,14 @@ char **split_line(char *line, unsigned int numlinea)
         tokens[0] = strtok(line, " \t\n");
         if (tokens[0] != NULL)
         {
+                // printf("Function = %s\n", tokens[0]);
                 if (strcmp("push", tokens[0]) == 0)
                 {
                         tokens[1] = strtok(NULL, " \t\n");
-                        printf("num = %s\n", tokens[1]);
+                        // printf("push num = %s\n", tokens[1]);
                         /* falta solucionar si es un numero con atoi no funciona*/
                         numero = atoi(tokens[1]);
+                        stack_value = atoi(tokens[1]);
                         if (!numero || tokens[1] == NULL)
                         {
                                 fprintf(stderr, "L%d: usage: push integer\n", numlinea);

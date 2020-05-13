@@ -7,10 +7,10 @@
  * @numlinea: An int that count each line
  * Returns: 0 on succes, 1 on failure
  */
-int find_function(char **tokens, unsigned int numlinea)
+int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 {
         int i = 0;
-        stack_t **head = NULL;
+
         instruction_t functions[] = {
                 {"push", func_push},
                 {"pall", func_pall},
@@ -24,7 +24,7 @@ int find_function(char **tokens, unsigned int numlinea)
         {
                 if (strcmp(functions[i].opcode, tokens[0]) == 0)
                 {
-                        functions[i].f(head, numlinea);
+                        functions[i].f(stack, numlinea);
                         return (exit_value);
                 }
                 i++;

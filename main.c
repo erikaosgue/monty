@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	size_t length = 0;
         unsigned int numlinea = 0;
         int success = 0;
+        stack_t *head = NULL;
 
         if (argc != 2)
         {
@@ -30,22 +31,26 @@ int main(int argc, char *argv[])
                 fprintf(stderr, "%s %s\n", "Error: Can't open file", filename);
                 exit(EXIT_FAILURE);
         }
+
         while ((getline(&line, &length, fd)) != -1) 
         {
                 numlinea++;
                 tokens = split_line(line, numlinea);
                 if (tokens == NULL)
                         break;
-                success = find_function(tokens, numlinea);
+                success = find_function(tokens, numlinea, &head);
                 if (success == 1)
                 { 
                         free(tokens);
                         break;
                 } 
                 free(tokens);
+                // printf("\n---Here again---\n");
         }
-        if (line)
-                free(line);
+        free_dlistint(head); 
+        free(line);
         fclose(fd);
+        if (exit_value)
+                exit(EXIT_FAILURE);
         return (0);
 }

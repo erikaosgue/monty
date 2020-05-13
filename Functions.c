@@ -9,67 +9,57 @@
 
 
 /**
- * push - add node initial of a list
- * @head: Pointer from main
- * @n: Integer to node
- *
- * Return: head
+ * func_push - add a stack to the top of a list
+ * @head: Points to the head of the list
+ * @numlinea: Its the line number of the file
  */
 
-void *func_push(stack_t **head, unsigned int n)
+void func_push(stack_t **head, unsigned int numlinea)
 {
-	stack_t *new_node;
-
-	if (head == NULL)
-		return (NULL);
-
-	new_node = malloc(sizeof(stack_t));
-	if (!new_node)
-		return (NULL);
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-	new_node->prev = NULL;
-	new_node->next = *head;
-
-	if (*head)
-		(*head)->prev = new_node;
-	*head = new_node;
+	stack_t *success = NULL;
+	success = add_dnodeint(head, stack_value);
+	if (!success)
+		exit_value = 1;
+	exit_value = 2;
+	printf("End of func_push\n");
+	(void)numlinea;
 }
 
 /**
- * pall - for managment of a list
- * @h: poniter
- * Return: forward Value Counter.
+ * func_pall - print all the elemnts of the stack
+ * @head: Points to the head of the list
+ * @numlinea: Its the line number of the file
 */
 
-void func_pall(const stack_t *h, unsigned int n)
+void func_pall(stack_t **stack, unsigned int line_number)
 {
 	int forward = 0;
 
-	while (h)
+	while (*stack)
 	{
-		printf("%d\n", h->n);
+		printf("%d\n", (*stack)->n);
 		forward++;
-		h = h->next;
+		*stack = (*stack)->next;
 	}
+	(void)line_number;
 }
 
 /**
- * pint - for managment of a list
- * @h: poniter
- * Return: forward Value Counter.
+ * func_pint - print just the top value of the stack
+ * @h: Points to the head of the list
+ * @numlinea: Its the line number of the file
 */
 
-void func_pint(const stack_t *h, unsigned int n)
+void func_pint(stack_t **stack, unsigned int line_number)
 {
-	printf("%d\n", h->n);
+	printf("%d\n", (*stack)->n);
+	(void)line_number;
 }
 
 /**
- * swap - Swaps first two elements.
- * @stack: pointer node.
- * @line_number: number in file.
+ * func_swap - Swaps first two elements of the list
+ * @stack: Points to the head of the list
+ * @line_number: Its the line number of the file
  */
 
 void func_swap(stack_t **stack, unsigned int line_number)
@@ -81,7 +71,7 @@ void func_swap(stack_t **stack, unsigned int line_number)
 	if (!stack || !*stack || !(*stack)->next)
 	{
 		printf("L%d: can't swap, stack too short\n", line_number);
-		exit(EXIT_FAILURE);
+		exit_value = 1;
 	}
 	else
 	{
