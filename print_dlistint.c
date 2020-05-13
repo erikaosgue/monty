@@ -1,4 +1,5 @@
 #include "monty.h"
+/* Para eliminar */
 /**
  * print_dlistint - Prints all the elements of a stack_t list.
  * @h:Points to the node which is the head of the list
@@ -7,7 +8,7 @@
 
 size_t print_dlistint(const stack_t *h)
 {
-	printf("in printing list\n");
+	printf("In printing list\n");
 	size_t count_node = 0;
 
 	if (h == NULL)

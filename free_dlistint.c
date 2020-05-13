@@ -1,4 +1,5 @@
 #include "monty.h"
+/* Para eliminar */
 
 /**
  * free_dlistint - free a stack_t list.

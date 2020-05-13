@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+/* Para eliminar */
 
 /* LIBRARIES */
 #include <stdio.h>
@@ -8,6 +9,7 @@
 #include <ctype.h>
 
 int exit_value;
+int stack_value;
 
 
 /**
@@ -42,16 +44,22 @@ typedef struct instruction_s
 
 
 char **split_line(char *line, unsigned int numlinea);
-int find_function(char **tokens, unsigned int numlinea);
+int find_function(char **tokens, unsigned int numlinea, stack_t **head);
 
+void func_pop(stack_t **head, unsigned int numlinea);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t dlistint_len(const stack_t *h);
 
-void func_pop(stack_t **head, unsigned int numlinea);
 void func_push(stack_t **head, unsigned int n);
-void func_pall(const stack_t *h, unsigned int n);
-void func_pint(const stack_t *h, unsigned int n);
+stack_t *add_dnodeint(stack_t **head, const int n);
+
+void func_pall(stack_t **stack, unsigned int line_number);
+void func_pint(stack_t **stack, unsigned int line_number);
 void func_swap(stack_t **stack, unsigned int line_number);
 void func_nop(stack_t **stack, unsigned int line_number);
+
+void free_dlistint(stack_t *head);
+size_t print_dlistint(const stack_t *h);
+
 
 #endif // MONTY_H

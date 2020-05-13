@@ -1,4 +1,5 @@
 #include "monty.h"
+/* Para eliminar */
 /**
  * dlistint_len - Count the number of elements in a linked stack_t list
  * @h:Points to the node which is the head of the list

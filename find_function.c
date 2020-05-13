@@ -1,4 +1,5 @@
 #include "monty.h"
+/* Para eliminar */
 
 
 /**
@@ -22,6 +23,7 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
         
         while(functions[i].opcode != NULL)
         {
+                printf("strcmp [%s] == [%s]\n", functions[i].opcode, tokens[0]);
                 if (strcmp(functions[i].opcode, tokens[0]) == 0)
                 {
                         functions[i].f(stack, numlinea);

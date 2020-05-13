@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "monty.h"
+/* Para eliminar */
 
 
 /** para subir a github*//** para subir a github*/
@@ -33,14 +34,8 @@ void func_push(stack_t **head, unsigned int numlinea)
 
 void func_pall(stack_t **stack, unsigned int line_number)
 {
-	int forward = 0;
-
-	while (*stack)
-	{
-		printf("%d\n", (*stack)->n);
-		forward++;
-		*stack = (*stack)->next;
-	}
+	print_dlistint(*stack);
+	printf("&&& pall funcion\n");
 	(void)line_number;
 }
 

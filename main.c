@@ -1,5 +1,7 @@
 #include "monty.h"
 
+/* Para eliminar */
+
 /**
  * main - principal funcion of the interpreter
  * @argc: An int that count the args
@@ -13,7 +15,7 @@ int main(int argc, char *argv[])
 	char *line = NULL, **tokens, *filename = NULL;
 	size_t length = 0;
         unsigned int numlinea = 0;
-        int success = 0;
+        int success = 0, len = 0;
         stack_t *head = NULL;
 
         if (argc != 2)
@@ -35,6 +37,9 @@ int main(int argc, char *argv[])
         while ((getline(&line, &length, fd)) != -1) 
         {
                 numlinea++;
+                len = strlen(line);
+		line[len - 1] = '\0';
+
                 tokens = split_line(line, numlinea);
                 if (tokens == NULL)
                         break;
@@ -45,7 +50,7 @@ int main(int argc, char *argv[])
                         break;
                 } 
                 free(tokens);
-                // printf("\n---Here again---\n");
+                printf("\n---Here again---\n");
         }
         free_dlistint(head); 
         free(line);
