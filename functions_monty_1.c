@@ -11,10 +11,12 @@ void func_push(stack_t **head, unsigned int numlinea)
 
 
 	success = add_dnodeint(head, exit_and_Svalue[1]);
-	exit_and_Svalue[0] = 0;
 	if (!success)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", numlinea);
 		exit_and_Svalue[0] = 1;
-	(void)numlinea;
+	}
+	exit_and_Svalue[0] = 0;
 }
 
 /**
@@ -39,7 +41,7 @@ void func_pint(stack_t **stack, unsigned int line_number)
 {
 	if (!*stack)
 	{
-		fprintf(stderr, "L%u: can't pint, stack empty", line_number);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		exit_and_Svalue[0] = 1;
 	}
 	else
@@ -63,7 +65,7 @@ void func_swap(stack_t **stack, unsigned int line_number)
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		exit_and_Svalue[0] = 1;
 	}
 	else

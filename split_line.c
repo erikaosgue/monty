@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * split_line - split the line from getline into tokens
  * @line: The buffer that contains the line of the file
@@ -32,8 +33,6 @@ char **split_line(char *line, unsigned int numlinea)
 				return (NULL);
 			}
 			number = atoi(tokens[1]);
-			if (number < 0)
-				number *= -1;
 			exit_and_Svalue[1] = number;
 		}
 		return (tokens);
