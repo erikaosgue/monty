@@ -1,5 +1,5 @@
 #include "monty.h"
-int exit_and_Svalue[2];
+int exit_and_Svalue[3];
 
 /**
  * main - principal funcion of the interpreter

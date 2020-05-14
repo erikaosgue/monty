@@ -24,6 +24,12 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 		{"mul", func_mul},
 		{"mod", func_mod},
 		{"pchar", func_pchar},
+		{"pstr", func_pstr},
+		{"rotl", func_rotl},
+		{"rotr", func_rotr},
+		{"#", func_comments},
+		{"stack", func_stack},
+		{"queue", func_queue},
 		{NULL, NULL}};
 
 	while (functions[i].opcode != NULL)
@@ -35,6 +41,6 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", numlinea, tokens[0]);
+	fprintf(stderr, "L%u: unknown instruction %s\n", numlinea, tokens[0]);
 	return (exit_and_Svalue[0] = 1);
 }
