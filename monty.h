@@ -60,4 +60,12 @@ void func_mod(stack_t **head, unsigned int line_number);
 void func_pchar(stack_t **stack, unsigned int line_number);
 int check_spaces(char *line);
 int isNumber(char *ptr);
+void func_pstr(stack_t **stack, unsigned int line_number);
+void func_rotl(stack_t **stack, unsigned int line_number);
+stack_t *add_dnodeint_end(stack_t **head, const int n);
+void func_rotr(stack_t **stack, unsigned int line_number);
+stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
+void func_comments(stack_t **stack, unsigned int line_number);
+void func_stack(stack_t **stack, unsigned int line_number);
+void func_queue(stack_t **stack, unsigned int line_number);
 #endif
