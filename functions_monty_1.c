@@ -17,7 +17,7 @@ void func_push(stack_t **head, unsigned int numlinea)
 }
 
 /**
- * func_pall - print all the elemnts of the stack
+ * func_pall - print all the elements of the stack
  * @stack: Points to the head of the list
  * @line_number: Its the line number of the file
 */

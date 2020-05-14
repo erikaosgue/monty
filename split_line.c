@@ -9,7 +9,7 @@ char **split_line(char *line, unsigned int numlinea)
 {
 	char **tokens = NULL;
 	int number = 0;
-	
+
 	tokens = malloc(sizeof(char *) * 2);
 	if (tokens == NULL)
 		return (NULL);

@@ -23,7 +23,7 @@ void func_mod(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * func_pchar - prints the char at the top of the stack
+ * func_pchar - prints the char-ascci value of the top from the stack
  * @stack: Pointer to the head of the list
  * @line_number: An int that count each line
  */
