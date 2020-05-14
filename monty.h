@@ -7,7 +7,7 @@
 #include <string.h>
 #include <ctype.h>
 
-extern int exit_and_Svalue[2];
+extern int exit_and_Svalue[];
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -60,5 +60,4 @@ void func_mod(stack_t **head, unsigned int line_number);
 void func_pchar(stack_t **stack, unsigned int line_number);
 int check_spaces(char *line);
 int isNumber(char *ptr);
-
 #endif
