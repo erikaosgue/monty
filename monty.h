@@ -69,5 +69,7 @@ void func_mul(stack_t **stack, unsigned int line_number);
 void func_mod(stack_t **head, unsigned int line_number);
 void func_pchar(stack_t **stack, unsigned int line_number);
 
+int isNumber(char *ptr);
+
 
 #endif // MONTY_H

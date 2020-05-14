@@ -13,7 +13,6 @@ void func_push(stack_t **head, unsigned int numlinea)
 	if (!success)
 		exit_value = 1;
 	exit_value = 2;
-	printf("End of func_push\n");
 	(void)numlinea;
 }
 
@@ -26,7 +25,6 @@ void func_push(stack_t **head, unsigned int numlinea)
 void func_pall(stack_t **stack, unsigned int line_number)
 {
 	print_dlistint(*stack);
-	printf("&&& pall funcion\n");
 	(void)line_number;
 }
 
@@ -55,7 +53,7 @@ void func_swap(stack_t **stack, unsigned int line_number)
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		printf("L%d: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit_value = 1;
 	}
 	else

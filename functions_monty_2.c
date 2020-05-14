@@ -36,8 +36,6 @@ void func_add(stack_t **stack, unsigned int line_number)
 	sum += head->next->n;
 	head->next->n = sum;
 	delete_dnodeint_at_index(stack, 0);
-	printf("Sum = %d", sum);
-
 
 }
 void func_sub(stack_t **stack, unsigned int line_number)
@@ -55,8 +53,6 @@ void func_sub(stack_t **stack, unsigned int line_number)
 	sub -= head->n;
 	head->next->n = sub;
 	delete_dnodeint_at_index(stack, 0);
-	printf("Sub = %d", sub);
-
 
 }
 
@@ -78,7 +74,6 @@ void func_div(stack_t **stack, unsigned int line_number)
 		div /= head->n;
 		head->next->n = div;
 		delete_dnodeint_at_index(stack, 0);
-		printf("div = %d", div);
 	}
 	else
 	{
@@ -102,7 +97,5 @@ void func_mul(stack_t **stack, unsigned int line_number)
 	mul *= head->n;
 	head->next->n = mul;
 	delete_dnodeint_at_index(stack, 0);
-	printf("mul = %d", mul);
-
 }
 

@@ -19,7 +19,6 @@ void func_mod(stack_t **stack, unsigned int line_number)
 	mod %= head->n;
 	head->next->n = mod;
 	delete_dnodeint_at_index(stack, 0);
-	printf("--> mod = %d", mod);
 
 }
 void func_pchar(stack_t **stack, unsigned int line_number)
@@ -34,7 +33,6 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 	if (num >= 0 && num <= 127)
 	{
 		num = (*stack)->n;
-		printf("ascci value is --> [%d] = [%c]\n", num, num);
 	}
 	else
 	{

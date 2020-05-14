@@ -8,8 +8,8 @@
 char **split_line(char *line, unsigned int numlinea)
 {
 	char **tokens = NULL;
-	int numero = 0;
-
+	int number = 0;
+	
 	tokens = malloc(sizeof(char *) * 2);
 	if (tokens == NULL)
 		return (NULL);
@@ -21,16 +21,18 @@ char **split_line(char *line, unsigned int numlinea)
 		if (strcmp("push", tokens[0]) == 0)
 		{
 			tokens[1] = strtok(NULL, " \t");
+			number = isNumber(tokens[1]);
 			printf("push num = %s\n", tokens[1]);
-			/* falta solucionar si es un numero con atoi no funciona*/
-			numero = atoi(tokens[1]);
-			stack_value = atoi(tokens[1]);
-			if (!numero || tokens[1] == NULL)
+			if (!number || tokens[1] == NULL)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", numlinea);
 				free(tokens);
 				return (NULL);
 			}
+			number = atoi(tokens[1]);
+			if (number < 0)
+				number *= -1;
+			stack_value = number;
 		}
 		return (tokens);
 	}
