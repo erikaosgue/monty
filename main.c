@@ -48,9 +48,6 @@ int main(int argc, char *argv[])
 	}
 	free_dlistint(head), free(line), fclose(fd);
 	if (exit_and_Svalue[0])
-	{
-		printf("EXIT_FAILURE\n");
 		exit(EXIT_FAILURE);
-	}
 	return (0);
 }
