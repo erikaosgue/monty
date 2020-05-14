@@ -31,11 +31,10 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 		if (strcmp(functions[i].opcode, tokens[0]) == 0)
 		{
 			functions[i].f(stack, numlinea);
-			return (exit_value);
+			return (exit_and_Svalue[0]);
 		}
 		i++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", numlinea, tokens[0]);
-	exit_value = 1;
-	return (exit_value);
+	return (exit_and_Svalue[0] = 1);
 }

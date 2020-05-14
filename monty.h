@@ -7,8 +7,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int exit_value;
-int stack_value;
+int exit_and_Svalue [2];
 
 
 /**
@@ -68,6 +67,7 @@ void func_div(stack_t **stack, unsigned int line_number);
 void func_mul(stack_t **stack, unsigned int line_number);
 void func_mod(stack_t **head, unsigned int line_number);
 void func_pchar(stack_t **stack, unsigned int line_number);
+int check_spaces(char *line);
 
 int isNumber(char *ptr);
 
