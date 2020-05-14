@@ -2,23 +2,25 @@
 
 /**
  * func_pop - removes the top element of the stack
- * @head: Pointer to the head of the list
+ * @stack: Pointer to the head of the list
  * @line_number: An int that count each line
  */
-void func_pop(stack_t **head, unsigned int line_number)
+void func_pop(stack_t **stack, unsigned int line_number)
 {
-	if (*head != NULL)
+	int success = 0;
+
+	if (*stack != NULL)
 	{
-		delete_dnodeint_at_index(head, 0);
-		printf("Succesfully took the top value = [%d] pop \n", stack_value);
-		exit_value = 0;
+		success = delete_dnodeint_at_index(stack, 0);
+		if (success == -1)
+			exit_and_Svalue[0] = 1;
+		exit_and_Svalue[0] = 0;
 	}
 	else
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
-		exit_value = 1;
+		exit_and_Svalue[0] = 1;
 	}
-	(void)head;
 }
 
 /**
@@ -29,20 +31,22 @@ void func_pop(stack_t **head, unsigned int line_number)
 void func_add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
+	int success = 0;
 	int sum = 0;
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		printf("L%d: can't add, stack too short\n", line_number);
-		exit_value = 1;
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+		exit_and_Svalue[0] = 1;
 	}
 	head = *stack;
 	sum += head->n;
 	sum += head->next->n;
 	head->next->n = sum;
-	delete_dnodeint_at_index(stack, 0);
-	printf("Sum = %d", sum);
-
+	success = delete_dnodeint_at_index(stack, 0);
+	if (success == -1)
+		exit_and_Svalue[0] = 1;
+	exit_and_Svalue[0] = 0;
 
 }
 
@@ -56,19 +60,21 @@ void func_sub(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
 	int sub = 0;
+	int success = 0;
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		printf("L%d: can't sub, stack too short\n", line_number);
-		exit_value = 1;
+		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
+		exit_and_Svalue[0] = 1;
 	}
 	head = *stack;
 	sub = head->next->n;
 	sub -= head->n;
 	head->next->n = sub;
-	delete_dnodeint_at_index(stack, 0);
-	printf("Sub = %d", sub);
-
+	success = delete_dnodeint_at_index(stack, 0);
+	if (success == -1)
+		exit_and_Svalue[0] = 1;
+	exit_and_Svalue[0] = 0;
 
 }
 
@@ -82,11 +88,12 @@ void func_div(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
 	int div = 0, num = 0;
+	int success = 0;
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
-		exit_value = 1;
+		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
+		exit_and_Svalue[0] = 1;
 	}
 	head = *stack;
 	div = head->next->n;
@@ -95,13 +102,15 @@ void func_div(stack_t **stack, unsigned int line_number)
 	{
 		div /= head->n;
 		head->next->n = div;
-		delete_dnodeint_at_index(stack, 0);
-		printf("div = %d", div);
+		success = delete_dnodeint_at_index(stack, 0);
+		if (success == -1)
+			exit_and_Svalue[0] = 1;
+		exit_and_Svalue[0] = 0;
 	}
 	else
 	{
-		fprintf(stderr, "L%d: division by zero\n", line_number);
-		exit_value = 1;
+		fprintf(stderr, "L%u: division by zero\n", line_number);
+		exit_and_Svalue[0] = 1;
 	}
 }
 
@@ -115,18 +124,20 @@ void func_mul(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
 	int mul = 0;
+	int success = 0;
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		printf("L%d: can't mul, stack too short\n", line_number);
-		exit_value = 1;
+		fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
+		exit_and_Svalue[0] = 1;
 	}
 	head = *stack;
 	mul = head->next->n;
 	mul *= head->n;
 	head->next->n = mul;
-	delete_dnodeint_at_index(stack, 0);
-	printf("mul = %d", mul);
-
+	success = delete_dnodeint_at_index(stack, 0);
+	if (success == -1)
+		exit_and_Svalue[0] = 1;
+	exit_and_Svalue[0] = 0;
 }
 

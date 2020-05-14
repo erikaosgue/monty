@@ -14,8 +14,11 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 
 	current = *head;
 	new = malloc(sizeof(stack_t));
-	if (new == NULL)
-		return (NULL);
+	if (!new)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit_and_Svalue[0] = 1;
+	}
 	new->n = n;
 	new->prev = NULL;
 
@@ -23,15 +26,11 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 	{
 		new->next = NULL;
 		*head = new;
-		printf("---> Success adding a new stack\n");
-		print_dlistint(*head);
 		return (*head);
 	}
 	current->prev = new;
 	new->next = current;
 	*head = new;
-	printf("---> Success adding a new stack\n");
-	print_dlistint(*head);
 	return (*head);
 }
 
@@ -60,7 +59,6 @@ void free_dlistint(stack_t *head)
 
 size_t print_dlistint(const stack_t *h)
 {
-	printf("In printing list\n");
 	size_t count_node = 0;
 
 	if (h == NULL)
@@ -68,7 +66,7 @@ size_t print_dlistint(const stack_t *h)
 
 	while (h)
 	{
-		printf("%d\n", h->n);
+		fprintf(stdout, "%d\n", h->n);
 		count_node += 1;
 		h = h->next;
 	}
