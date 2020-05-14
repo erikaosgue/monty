@@ -1,6 +1,4 @@
 #include "monty.h"
-/* Para eliminar */
-
 /**
  * free_dlistint - free a stack_t list.
  * @head: Points to the head that points to the node that is the head

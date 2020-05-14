@@ -1,14 +1,4 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "monty.h"
-/* Para eliminar */
-
-
-/** para subir a github*//** para subir a github*/
-/** para subir a github*/
-
-
 /**
  * func_push - add a stack to the top of a list
  * @head: Points to the head of the list
@@ -18,6 +8,7 @@
 void func_push(stack_t **head, unsigned int numlinea)
 {
 	stack_t *success = NULL;
+
 	success = add_dnodeint(head, stack_value);
 	if (!success)
 		exit_value = 1;
@@ -58,10 +49,9 @@ void func_pint(stack_t **stack, unsigned int line_number)
  */
 
 void func_swap(stack_t **stack, unsigned int line_number)
-{	
-
+{
 	stack_t *temp, *node;
-	int h;
+	int aux;
 
 	if (!stack || !*stack || !(*stack)->next)
 	{
@@ -72,9 +62,9 @@ void func_swap(stack_t **stack, unsigned int line_number)
 	{
 		temp = *stack;
 		node = temp->next;
-		h = temp->n;
+		aux = temp->n;
 		temp->n = node->n;
-		node->n = h;
+		node->n = aux;
 	}
 }
 

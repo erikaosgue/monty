@@ -1,6 +1,5 @@
 #ifndef MONTY_H
 #define MONTY_H
-/* Para eliminar */
 
 /* LIBRARIES */
 #include <stdio.h>
@@ -62,6 +61,13 @@ void func_add(stack_t **head, unsigned int numlinea);
 
 void free_dlistint(stack_t *head);
 size_t print_dlistint(const stack_t *h);
+
+void func_add(stack_t **stack, unsigned int line_number);
+void func_sub(stack_t **stack, unsigned int line_number);
+void func_div(stack_t **stack, unsigned int line_number);
+void func_mul(stack_t **stack, unsigned int line_number);
+void func_mod(stack_t **head, unsigned int line_number);
+void func_pchar(stack_t **stack, unsigned int line_number);
 
 
 #endif // MONTY_H
