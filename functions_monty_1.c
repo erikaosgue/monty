@@ -18,10 +18,9 @@ void func_push(stack_t **head, unsigned int numlinea)
 
 /**
  * func_pall - print all the elemnts of the stack
- * @head: Points to the head of the list
- * @numlinea: Its the line number of the file
+ * @stack: Points to the head of the list
+ * @line_number: Its the line number of the file
 */
-
 void func_pall(stack_t **stack, unsigned int line_number)
 {
 	print_dlistint(*stack);
@@ -30,8 +29,8 @@ void func_pall(stack_t **stack, unsigned int line_number)
 
 /**
  * func_pint - print just the top value of the stack
- * @h: Points to the head of the list
- * @numlinea: Its the line number of the file
+ * @stack: Points to the head of the list
+ * @line_number: Its the line number of the file
 */
 
 void func_pint(stack_t **stack, unsigned int line_number)
@@ -66,6 +65,11 @@ void func_swap(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * func_nop - this function doesn’t do anything
+ * @stack: Points to the head of the list
+ * @line_number: Its the line number of the file
+ */
 void func_nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;

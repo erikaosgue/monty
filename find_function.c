@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * find - function Finds the monty function
+ * find_function - function Finds the monty function
  * @tokens: Contains the function and its args
  * @numlinea: An int that count each line
- * Returns: 0 on succes, 1 on failure
+ * @stack: Points to the head of the list
+ * Return: 0 on succes, 1 on failure
  */
 int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 {
