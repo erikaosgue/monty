@@ -1,10 +1,13 @@
 #include "monty.h"
+int exit_and_Svalue[2];
+
 /**
  * main - principal funcion of the interpreter
  * @argc: An int that count the args
  * @argv: Matrix with the args
  * Return: 0 on succes
  */
+
 int main(int argc, char *argv[])
 {
 	FILE *fd;
