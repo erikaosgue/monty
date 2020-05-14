@@ -35,6 +35,6 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", numlinea, tokens[0]);
+	fprintf(stderr, "L%u: unknown instruction %s\n", numlinea, tokens[0]);
 	return (exit_and_Svalue[0] = 1);
 }

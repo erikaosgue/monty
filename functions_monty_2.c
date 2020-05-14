@@ -103,7 +103,6 @@ void func_div(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-	
 		head = *stack;
 		div = head->next->n;
 		num = head->n;

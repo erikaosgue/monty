@@ -27,7 +27,7 @@ char **split_line(char *line, unsigned int numlinea)
 			number = isNumber(tokens[1]);
 			if (!number || tokens[1] == NULL)
 			{
-				fprintf(stderr, "L%d: usage: push integer\n", numlinea);
+				fprintf(stderr, "L%u: usage: push integer\n", numlinea);
 				exit_and_Svalue[0] = 1;
 				free(tokens);
 				return (NULL);
