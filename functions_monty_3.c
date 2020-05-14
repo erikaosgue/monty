@@ -65,3 +65,60 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 		}
 	}
 }
+
+void func_pstr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *current = NULL;
+	int num = 0;
+
+	if (*stack)
+	{
+		current = *stack;
+		while (current)
+		{
+			num = current->n;
+			if (num > 0 && num <= 127)
+				fprintf(stdout, "%c", num);
+			else
+				break;
+			if (current->next == NULL)
+				break;
+			current = current->next;
+		}
+	}
+	fprintf(stdout, "\n");
+	exit_and_Svalue[0] = 0;
+	(void)line_number;
+}
+
+
+void func_rotl(stack_t **stack, unsigned int line_number)
+{
+	stack_t *current = NULL;
+	int number = 0;
+
+	if (*stack)
+	{
+		current = *stack;
+		number = current->n;
+		add_dnodeint_end(stack, number);
+		delete_dnodeint_at_index(stack, 0);
+	}
+	exit_and_Svalue[0] = 0;
+	(void)line_number;
+}
+
+void func_rotr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *node = NULL;
+	int len_list = 0, numero = 0;
+
+	len_list = dlistint_len(*stack);
+	node = get_dnodeint_at_index(*stack, len_list - 1);
+	numero = node->n;
+
+	add_dnodeint(stack, numero);
+	delete_dnodeint_at_index(stack, len_list);
+	exit_and_Svalue[0] = 0;
+	(void)line_number;
+}
