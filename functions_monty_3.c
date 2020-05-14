@@ -66,6 +66,11 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * func_pstr - prints the string starting at the top of the stack
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = NULL;
@@ -91,6 +96,11 @@ void func_pstr(stack_t **stack, unsigned int line_number)
 	(void)line_number;
 }
 
+/**
+ * func_rotl - rotates the stack to the top
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 
 void func_rotl(stack_t **stack, unsigned int line_number)
 {
@@ -108,6 +118,11 @@ void func_rotl(stack_t **stack, unsigned int line_number)
 	(void)line_number;
 }
 
+/**
+ * func_rotr - otates the stack to the bottom
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node = NULL;
