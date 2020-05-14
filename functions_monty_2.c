@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * func_pop - split the line from getline into tokens
+ * func_pop - removes the top element of the stack
  * @head: Pointer to the head of the list
- * @numlinea: An int that count each line
+ * @line_number: An int that count each line
  */
 void func_pop(stack_t **head, unsigned int line_number)
 {
@@ -21,6 +21,11 @@ void func_pop(stack_t **head, unsigned int line_number)
 	(void)head;
 }
 
+/**
+ * func_add - adds the top two elements of the stack
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
@@ -40,6 +45,13 @@ void func_add(stack_t **stack, unsigned int line_number)
 
 
 }
+
+/**
+ * func_sub - subtracts the top element of the stack
+ * from the second top element of the stack
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_sub(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
@@ -60,6 +72,12 @@ void func_sub(stack_t **stack, unsigned int line_number)
 
 }
 
+/**
+ * func_div - divides the second top element of the
+ * stack by the top element of the stack
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_div(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
@@ -87,6 +105,12 @@ void func_div(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * func_mul - multiplies the second top element of
+ * the stack with the top element of the stack
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_mul(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;

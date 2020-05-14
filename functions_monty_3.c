@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
  * func_mod - get the module of the second top with the top node in the list
- * @head: Pointer to the head of the list
- * @numlinea: An int that count each line
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
  */
 void func_mod(stack_t **stack, unsigned int line_number)
 {
@@ -22,6 +22,12 @@ void func_mod(stack_t **stack, unsigned int line_number)
 	printf("--> mod = %d", mod);
 
 }
+
+/**
+ * func_pchar - prints the char at the top of the stack
+ * @stack: Pointer to the head of the list
+ * @line_number: An int that count each line
+ */
 void func_pchar(stack_t **stack, unsigned int line_number)
 {
 	int num = 0;

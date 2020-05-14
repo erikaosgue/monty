@@ -3,7 +3,7 @@
  * split_line - split the line from getline into tokens
  * @line: The buffer that contains the line of the file
  * @numlinea: An int that count each line
- * Returns: The monty functions on succes, NULL on failure
+ * Return: The monty functions on succes, NULL on failure
  */
 char **split_line(char *line, unsigned int numlinea)
 {
