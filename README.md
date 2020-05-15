@@ -60,7 +60,11 @@ What you should learn from this project:
 ### [12. pstr](./1009-mul.bf)
 * Implement the pstr opcode.
 
+### [13. rotl](./1009-mul.bf)
+* Implement the rotl opcode.
 
+### [14. rotr](./1009-mul.bf)
+* Implement the rotr opcode.
 
 ---
 
