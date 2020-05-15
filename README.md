@@ -51,10 +51,10 @@ What you should learn from this project:
 ### [9. mod](./1009-mul.bf)
 * Implement the mod opcode.
 
-### [10. comments](./1009-mul.bf)
+### [10. comments](./1010-mul.bf)
 * Implement the capability of commenting opcode.
 
-### [11. pchar](./1009-mul.bf)
+### [11. pchar](./1011-mul.bf)
 * Implement the pchar opcode.
 
 ### [12. pstr](./1009-mul.bf)
