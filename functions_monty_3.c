@@ -48,6 +48,7 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 	if (!*stack)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
+
 		exit_and_Svalue[0] = 1;
 	}
 	else
@@ -55,7 +56,7 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 		num = (*stack)->n;
 		if (num >= 0 && num <= 127)
 		{
-			fprintf(stdout, "%c\n", num);
+			putchar(num);
 			exit_and_Svalue[0] = 0;
 		}
 		else
