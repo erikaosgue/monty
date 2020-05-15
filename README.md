@@ -57,7 +57,7 @@ What you should learn from this project:
 ### [11. pchar](./1011-mul.bf)
 * Implement the pchar opcode.
 
-### [12. pstr](./1009-mul.bf)
+### [12. pstr](./1012-mul.bf)
 * Implement the pstr opcode.
 
 ### [13. rotl](./1009-mul.bf)
