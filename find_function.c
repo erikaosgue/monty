@@ -27,7 +27,6 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 		{"pstr", func_pstr},
 		{"rotl", func_rotl},
 		{"rotr", func_rotr},
-		{"#", func_comments},
 		{"stack", func_stack},
 		{"queue", func_queue},
 		{NULL, NULL}};
