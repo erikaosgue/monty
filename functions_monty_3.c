@@ -55,7 +55,7 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 		num = (*stack)->n;
 		if (num >= 0 && num <= 127)
 		{
-			fprintf(stdout, "%c\n", num);
+			printf("%c\n", num);
 			exit_and_Svalue[0] = 0;
 		}
 		else
@@ -83,7 +83,7 @@ void func_pstr(stack_t **stack, unsigned int line_number)
 		{
 			num = current->n;
 			if (num > 0 && num <= 127)
-				fprintf(stdout, "%c", num);
+				printf("%c", num);
 			else
 				break;
 			if (current->next == NULL)
@@ -91,7 +91,7 @@ void func_pstr(stack_t **stack, unsigned int line_number)
 			current = current->next;
 		}
 	}
-	fprintf(stdout, "\n");
+	printf("\n");
 	exit_and_Svalue[0] = 0;
 	(void)line_number;
 }
