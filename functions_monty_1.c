@@ -10,13 +10,11 @@ void func_push(stack_t **head, unsigned int numlinea)
 	stack_t *success = NULL;
 
 	if (exit_and_Svalue[2])
-	{
 		success = add_dnodeint_end(head, exit_and_Svalue[1]);
-	}
 	else
 		success = add_dnodeint(head, exit_and_Svalue[1]);
-	exit_and_Svalue[0] = 0;
 
+	exit_and_Svalue[0] = 0;
 	if (!success)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", numlinea);

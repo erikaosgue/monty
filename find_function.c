@@ -27,13 +27,14 @@ int find_function(char **tokens, unsigned int numlinea, stack_t **stack)
 		{"pstr", func_pstr},
 		{"rotl", func_rotl},
 		{"rotr", func_rotr},
-		{"#", func_comments},
 		{"stack", func_stack},
 		{"queue", func_queue},
 		{NULL, NULL}};
 
 	while (functions[i].opcode != NULL)
 	{
+		if (*tokens[0] == '#')
+			return (exit_and_Svalue[0] = 0);
 		if (strcmp(functions[i].opcode, tokens[0]) == 0)
 		{
 			functions[i].f(stack, numlinea);
