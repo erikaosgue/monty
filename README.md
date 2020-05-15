@@ -60,10 +60,10 @@ What you should learn from this project:
 ### [12. pstr](./1012-mul.bf)
 * Implement the pstr opcode.
 
-### [13. rotl](./1009-mul.bf)
+### [13. rotl](./1013-mul.bf)
 * Implement the rotl opcode.
 
-### [14. rotr](./1009-mul.bf)
+### [14. rotr](./1014-mul.bf)
 * Implement the rotr opcode.
 
 ### [15. stack, queue](./1009-mul.bf)
