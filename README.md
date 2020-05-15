@@ -66,6 +66,9 @@ What you should learn from this project:
 ### [14. rotr](./1009-mul.bf)
 * Implement the rotr opcode.
 
+### [15. stack, queue](./1009-mul.bf)
+* Implement the stack, queue opcode.
+
 ---
 
 ## Author
