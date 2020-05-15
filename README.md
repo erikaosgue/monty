@@ -33,11 +33,14 @@ What you should learn from this project:
 ### [3. swap](./1003-mul.bf)
 * Implement the swap opcode.
 
+### [4. add](./1004-mul.bf)
+* Implement the add opcode.
 
+### [5. nop](./1005-mul.bf)
+* Implement the nop opcode.
 
-
-
-
+### [6. sub](./1006-mul.bf)
+* Implement the sub opcode.
 
 
 
