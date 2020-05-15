@@ -48,6 +48,7 @@ void func_pchar(stack_t **stack, unsigned int line_number)
 	if (!*stack)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
+
 		exit_and_Svalue[0] = 1;
 	}
 	else
@@ -128,12 +129,15 @@ void func_rotr(stack_t **stack, unsigned int line_number)
 	stack_t *node = NULL;
 	int len_list = 0, numero = 0;
 
-	len_list = dlistint_len(*stack);
-	node = get_dnodeint_at_index(*stack, len_list - 1);
-	numero = node->n;
+	if (*stack)
+	{
+		len_list = dlistint_len(*stack);
+		node = get_dnodeint_at_index(*stack, len_list - 1);
+		numero = node->n;
 
-	add_dnodeint(stack, numero);
-	delete_dnodeint_at_index(stack, len_list);
+		add_dnodeint(stack, numero);
+		delete_dnodeint_at_index(stack, len_list);
+	}
 	exit_and_Svalue[0] = 0;
 	(void)line_number;
 }
