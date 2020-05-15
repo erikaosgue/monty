@@ -42,11 +42,14 @@ What you should learn from this project:
 ### [6. sub](./1006-mul.bf)
 * Implement the sub opcode.
 
+### [7. div](./1007-mul.bf)
+* Implement the div opcode.
 
+### [8. mul](./1008-mul.bf)
+* Implement the mul opcode.
 
-
-
-
+### [9. mod](./1009-mul.bf)
+* Implement the mod opcode.
 
 
 
