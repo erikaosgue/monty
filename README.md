@@ -1,12 +1,12 @@
 # 0x19. C - Stacks, Queues - LIFO, FIFO
 
-## Resources:books:
+## Resources:
 Read or watch:
 * [Google](https://intranet.hbtn.io/rltoken/56-bDz7IrFgcH02EkGkB3w)
 * [How do I use extern to share variables between source files in C?](https://intranet.hbtn.io/rltoken/9neX6gaN6DoA-ow1INgZqw)
 
 ---
-## Learning Objectives:bulb:
+## Learning Objectives:
 What you should learn from this project:
 
 * What do LIFO and FIFO mean
@@ -32,6 +32,42 @@ What you should learn from this project:
 
 ### [3. swap](./1003-mul.bf)
 * Implement the swap opcode.
+
+### [4. add](./1004-mul.bf)
+* Implement the add opcode.
+
+### [5. nop](./1005-mul.bf)
+* Implement the nop opcode.
+
+### [6. sub](./1006-mul.bf)
+* Implement the sub opcode.
+
+### [7. div](./1007-mul.bf)
+* Implement the div opcode.
+
+### [8. mul](./1008-mul.bf)
+* Implement the mul opcode.
+
+### [9. mod](./1009-mul.bf)
+* Implement the mod opcode.
+
+### [10. comments](./1010-mul.bf)
+* Implement the capability of commenting opcode.
+
+### [11. pchar](./1011-mul.bf)
+* Implement the pchar opcode.
+
+### [12. pstr](./1012-mul.bf)
+* Implement the pstr opcode.
+
+### [13. rotl](./1013-mul.bf)
+* Implement the rotl opcode.
+
+### [14. rotr](./1014-mul.bf)
+* Implement the rotr opcode.
+
+### [15. stack, queue](./1015-mul.bf)
+* Implement the stack, queue opcode.
 
 ---
 
